@@ -1,0 +1,14 @@
+.profileContainer {
+    background-color: beige;
+    display: inline-flex;
+    font-family: 'Just Me Again Down Here', cursive;
+}
+
+.profileName {
+    font-size: 64px;
+}
+
+.profilePoints {
+    font-size: 40px;
+    line-height: 12px;
+}

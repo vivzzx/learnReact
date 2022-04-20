@@ -1,0 +1,12 @@
+.container_left {
+    display: flex;
+    flex-direction: column;
+}
+
+.balloon_player1 {
+    background-color: yellowgreen;
+    width: 407px;
+    height: 80%;
+    display: inline-flex;
+    position: relative;
+}

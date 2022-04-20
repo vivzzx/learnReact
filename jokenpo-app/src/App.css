@@ -1,0 +1,34 @@
+.App {
+  text-align: center;
+  background-color: #9CCDFB;
+  height: 100vh;
+}
+
+h1 {
+  font-family: 'Just Me Again Down Here', cursive;
+  font-size: 5rem;
+  font-weight: 400;
+  letter-spacing: 20px;
+  margin-top: 0;
+}
+
+
+.playsContainer {
+  display: flex;
+  justify-content: space-around;
+  
+  height: 50vh;
+}
+
+.bothPlays {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  background-color: blueviolet;
+
+}
+
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap');
