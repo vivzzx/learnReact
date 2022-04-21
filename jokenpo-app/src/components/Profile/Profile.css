@@ -1,7 +1,15 @@
 .profileContainer {
-    background-color: beige;
-    display: inline-flex;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 0 50px;
+    
     font-family: 'Just Me Again Down Here', cursive;
+    background-color: brown;
+}
+
+.nameContainer {
+    margin: 0 40px;
 }
 
 .profileName {

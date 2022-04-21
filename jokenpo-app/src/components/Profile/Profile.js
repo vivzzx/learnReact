@@ -2,15 +2,15 @@ import React from 'react';
 import './Profile.css'
 import '../../App.css'
 
-function Profile() {
+function Profile(props) {
     return (
-        <div className='profileContainer'>
+        <div className='profileContainer' style={{flexDirection: props.direction}}>
             <div>
-                <img src="./Avatar.png" alt='avatar' />
+                <img src={require("./Avatar.png")} alt='avatar' />
             </div>
-            <div>
-                <div className='profileName'>Name</div>
-                <div className='profilePoints'>Points</div>
+            <div className='nameContainer'>
+                <div className='profileName'>You</div>
+                <div className='profilePoints'>Points:</div>
             </div>    
         </div>
     )

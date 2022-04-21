@@ -15,7 +15,7 @@ function App() {
       </div>
       <footer>
         <p>You dont know this game? Click here!</p>
-        <p>Jokenpo challenge by <a href=''>@Viv Galati</a></p>
+        <p>Jokenpo challenge by <a href='https://vivzzx.github.io/'>@Viv Galati</a></p>
       </footer>
 
     </div>

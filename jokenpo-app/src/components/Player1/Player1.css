@@ -3,10 +3,18 @@
     flex-direction: column;
 }
 
-.balloon_player1 {
-    background-color: yellowgreen;
+.bothBalloons {
+    /* background-color: yellowgreen; */
     width: 407px;
     height: 80%;
     display: inline-flex;
     position: relative;
+}
+
+.balloon_player1 {
+
+}
+
+.profileContainer {
+    align-self: flex-start;
 }

@@ -33,4 +33,12 @@
     gap: 8px;
 }
 
+.containerPlay {
+    position: absolute;
+    top: 80px;
+    left: 150px;
+    width: 100px;
+    height: 100px;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
