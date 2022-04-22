@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/* import React, { useState } from 'react';
 import './Player2.css';
 
 import Balloon from '../Balloon/Balloon';
@@ -24,9 +24,12 @@ export function Player2() {
                 <p>Player 2</p>
                 <div className='bothBalloons balloon2'>
                     <Balloon />
+                    <div>
+                        {play2}
+                    </div>
                 </div> 
                 <div className='containerPlay2'>
-                    {play2}
+                    
                 </div>
             </div>
             <div className='profilePlayer2'>
@@ -36,4 +39,4 @@ export function Player2() {
     )
 }
 
-export default Player2;
+export default Player2; */

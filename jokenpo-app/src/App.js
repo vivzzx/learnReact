@@ -2,15 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 
 import Player1 from "./components/Player1/Player1";
-import Player2 from "./components/Player2/Player2";
+//import Player2 from "./components/Player2/Player2";
 
 function App() {
   return (
     <div className="App">
       <h1>Jokenpo challenge</h1>
-      <div className='playsContainer'>
+      <div>
         <Player1 />
-        <Player2 />
+        
         
       </div>
       <footer>

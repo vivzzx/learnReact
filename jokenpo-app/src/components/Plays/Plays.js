@@ -7,6 +7,8 @@ import { ReactComponent as ArrowDown } from "./akar-icons_arrow-down.svg";
 import { ReactComponent as Paper } from "./paper.svg";
 import { ReactComponent as Rock } from "./rock.svg"; 
 import { ReactComponent as Scissors } from "./scissors.svg";
+import { ReactComponent as QuestionMark } from "./interrogacao.svg";
+import Buttons from '../Buttons/Buttons';
 
 const options = [
     <Paper />,
@@ -14,8 +16,9 @@ const options = [
     <Scissors />
 ]
 
-function Plays() {
+function Plays(props) {
     const [play, setPlay] = useState(<Paper />);
+    const [play2, setPlay2] = useState(<QuestionMark />);
 
     const increment = () => setPlay(prev => {
         let index = options.indexOf(prev) + 1
@@ -29,38 +32,40 @@ function Plays() {
 
     const decrement = () => setPlay(prev => {
         let index = options.indexOf(prev) - 1
-/*         if (index < 0) {
-            return options[2]
-        } else {
-            return options[index]
-        }   */
         return index < 0 ? options[2] : options[index];
     })
 
-/*     const togglePlay = ({target}) => {
-        const selected = target.value;
-        setPlay((prev) => {
-            if (prev.includes(selected)) {
-                return prev.filter(t => t !== selected)
-            }
-        })
-    } */
+     const togglePlay = () => {
+        const selected = play;
+        let randomNum = Math.floor(Math.random() * 3)
+        if (randomNum === 0) {
+            return setPlay2(<Paper />)
+        } else if (randomNum === 1) {
+            return setPlay2(<Rock />)
+        } else {
+            return setPlay2(<Scissors />)
+        }
+        
+    } 
 
     return (
         <div>
-            <div className='containerButtons'>
-                <div className='circleGo'>go!</div> 
-                <div className='buttonsLeft'>
-                    <div className='circle' onClick={increment} value={play}> 
-                        <ArrowUp />
+            <div className={props.player + ' containerPlay'}>
+                {props.player === "player1" ? play : play2}
+
+                <div className='containerButtons' id='divButtons'>
+                        <div className='circleGo' onClick={props.togglePlay}>go!</div> 
+                        <div className='buttonsLeft'>
+                            <div className='circle' onClick={props.increment}> 
+                                <ArrowUp />
+                            </div>
+                            <div className='circle' onClick={props.decrement}>
+                                <ArrowDown />
+                            </div>
+                        </div>
                     </div>
-                    <div className='circle' onClick={decrement}>
-                        <ArrowDown />
-                    </div>
-                </div>
-            </div>
-            <div className='containerPlay'>
-                {play}
+ 
+                
             </div>
         </div>
     )

@@ -3,6 +3,22 @@
     flex-direction: column;
 }
 
+.playsContainer {
+    display: flex;
+    justify-content: space-around;
+    
+    height: 50vh;
+  }
+
+.bothPlays {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40vw;
+    background-color: blueviolet;
+  }
+  
+
 .bothBalloons {
     /* background-color: yellowgreen; */
     width: 407px;
@@ -17,4 +33,27 @@
 
 .profileContainer {
     align-self: flex-start;
+}
+
+.container_left {
+    display: flex;
+    flex-direction: column;
+}
+
+.balloon2 {
+    transform: scaleX(-1);
+}
+
+.profilePlayer2 {
+    align-self: flex-end;
+    
+}
+
+.containerPlay2 {
+    background-color: crimson;
+    position: absolute;
+    top: 220px;
+    right: 250px;
+    width: 100px;
+    height: 100px;
 }

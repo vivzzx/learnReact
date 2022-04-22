@@ -41,4 +41,8 @@
     height: 100px;
 }
 
+.hidden {
+    display: none;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');

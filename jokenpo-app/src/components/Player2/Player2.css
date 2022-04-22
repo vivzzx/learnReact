@@ -15,8 +15,8 @@
 .containerPlay2 {
     background-color: crimson;
     position: absolute;
-    top: 80px;
-    left: 150px;
+    top: 220px;
+    right: 250px;
     width: 100px;
     height: 100px;
 }
