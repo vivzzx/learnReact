@@ -32,20 +32,36 @@ function App() {
 
   const randomPlay = () => {
     let randomNum = Math.floor(Math.random() * 3)
-    setPlay2(options[randomNum])
-    compareHands(play1, play2)
+    let newPlay2 = options[randomNum]
+    setPlay2(newPlay2)
+    console.log('newPlay: ', options[randomNum])
+    console.log('play2: ', play2)
+    compareHands(play1, newPlay2)
   }
 
-  const compareHands = (play1, play2) => {
-    if (play1 === play2) {
+  const compareHands = (play1, newPlay2) => {
+    
+    console.log('play1: ', play1, 'newPlay2: ', newPlay2)
+    if (play1 === newPlay2) {
       console.log('empate')
       return 'empate'
-    } else if (play1 === 'paper') {
-      console.log(play2 === 'rock' ? 'vc ganhou' : 'vc perdeu')
-    } else if (play1 === 'rock') {
-      console.log(play2 === 'scissors' ? 'vc ganhou' : 'vc perdeu')
-    }
-  }
+    } 
+    switch (play1) {
+      case 'paper':
+        console.log(newPlay2 === 'rock' ? 'vc ganhou' : 'vc perdeu')
+        break;
+      case 'rock':
+        console.log(newPlay2 === 'scissors' ? 'vc ganhou' : 'vc perdeu')
+        break;
+      case 'scissors':
+        console.log(newPlay2 === 'paper' ? 'vc ganhou' : 'vc perdeu')
+        break;
+      default:
+        console.log('erro')
+      }
+    
+    
+  } 
 
   return (
     <div className="App">
