@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import logo from './logo.svg'
 import './App.scss'
 
@@ -39,8 +39,17 @@ function App() {
     compareHands(play1, newPlay2)
   }
 
+  const points = (player) => {
+    if (player === 'player1') {
+      console.log("vc ganhou")
+      setPointsP1(prev => prev + 1)
+    } else {
+      console.log("player2 ganhou")
+      setPointsP2(prev => prev + 1)
+    }
+  }
+
   const compareHands = (play1, newPlay2) => {
-    
     console.log('play1: ', play1, 'newPlay2: ', newPlay2)
     if (play1 === newPlay2) {
       console.log('empate')
@@ -48,19 +57,17 @@ function App() {
     } 
     switch (play1) {
       case 'paper':
-        console.log(newPlay2 === 'rock' ? 'vc ganhou' : 'vc perdeu')
+        newPlay2 === 'rock' ? points('player1') : points('player2')
         break;
       case 'rock':
-        console.log(newPlay2 === 'scissors' ? 'vc ganhou' : 'vc perdeu')
+        newPlay2 === 'scissors' ? points('player1') : points('player2')
         break;
       case 'scissors':
-        console.log(newPlay2 === 'paper' ? 'vc ganhou' : 'vc perdeu')
+        newPlay2 === 'paper' ? points('player1') : points('player2')
         break;
       default:
         console.log('erro')
       }
-    
-    
   } 
 
   return (
@@ -91,7 +98,7 @@ function App() {
               <div className='avatarP1'></div>
               <div className='playerInfo'>
                 <p className='playerName'>You</p>
-                <p className='playerPoints'>Points: 0</p>
+                <p className='playerPoints'>Points: {pointsP1}</p>
               </div>
             </div>
           </div>
@@ -102,10 +109,10 @@ function App() {
             </div>
             <div className='profile'>
               <div className='playerInfo playerInfo2'>
-                <p className='playerName'>You</p>
-                <p className='playerPoints'>Points: 0</p>
+                <p className='playerName'>Viv</p>
+                <p className='playerPoints'>Points: {pointsP2}</p>
               </div>
-              <div className='avatarP1'></div>
+              <div className='avatarP2'></div>
             </div>
           </div>
         </div>

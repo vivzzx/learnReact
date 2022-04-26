@@ -33,9 +33,6 @@ $orange: #FF9457;
     }
   }
 
-
-  
-
   .playersContainer {
     display: flex;
     justify-content: space-around;
@@ -151,6 +148,11 @@ $orange: #FF9457;
 
       .avatarP1 {
         background-image: url('assets/images/Avatar.png');
+        width: 154px;
+        height: 154px;
+      }
+      .avatarP2 {
+        background-image: url('assets/images/viv.png');
         width: 154px;
         height: 154px;
       }
