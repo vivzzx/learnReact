@@ -1,7 +1,7 @@
 //colors
 $blue: #9CCDFB;
 $secondaryBlue: #688DAF;
-$deepBlue: #1A2A38;
+$deepBlue: #184066;
 $orange: #FF9457;
 
 // fonts
@@ -33,141 +33,209 @@ $orange: #FF9457;
     }
   }
 
-  .playersContainer {
+  main {
     display: flex;
-    justify-content: space-around;
-    margin: 0 80px;
-  
-    .player1 {
-      position: relative;
+    justify-content: center;
 
-      .containerButtons {
-        width: 90px;
-        height: 90px;
-        position: absolute;
-        left: -70px;
-        top: 80px;
-        display: inline-flex;
-        align-items: center;
+    .startContainer {
+      margin: 200px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      .button {
+        display: flex;
         justify-content: center;
-        gap: 2px;
+        align-items: center;
+        width: 355px;
+        height: 70px;
+        border-radius: 5px;
+        background-color: $secondaryBlue;
+        color: #FFFFFF;
+        font-family: 'Just Me Again Down Here', cursive;
+        letter-spacing: 10px;
+        font-size: 60px;
+      }
+    }
+
+    .playersContainer {
+      display: flex;
+      justify-content: space-around;
+      margin: 0 80px;
     
-        .circle {
-          display: flex;
+      .player1 {
+        position: relative;
+  
+        .containerButtons {
+          width: 90px;
+          height: 90px;
+          position: absolute;
+          left: -70px;
+          top: 80px;
+          display: inline-flex;
           align-items: center;
           justify-content: center;
-          background-color: #FFFFFF;
-          color: $deepBlue;
-          border-radius: 50%;
-    
-          &.circleGo {
-            width: 45px;
-            height: 45px;
-            font-family: 'Kavoon', cursive;
-            font-size: 20px;
+          gap: 2px;
+      
+          .circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #FFFFFF;
             color: $deepBlue;
+            border-radius: 50%;
+      
+            &.circleGo {
+              width: 45px;
+              height: 45px;
+              font-family: 'Kavoon', cursive;
+              font-size: 20px;
+              color: $deepBlue;
+            }
+      
+            &.controls {
+              width: 40px;
+              height: 40px;
+            }
           }
-    
-          &.controls {
-            width: 40px;
-            height: 40px;
+      
+          .buttonsLeft {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
           }
-        }
-    
-        .buttonsLeft {
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-        }
-        }
-    }
-
-    .balloon {
-      background-image: url('assets/images/balloon1.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 412px;
-      height: 368px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
-      &.invert {
-        transform: scaleX(-1);
+          }
       }
   
-      .hand {
-        margin-top: -70px;
-  
-        &.rock {
-          background-image: url('assets/images/rock.svg');
-          width: 108px;
-          height: 116px;
-        }
-        &.paper {
-          background-image: url('assets/images/paper.svg');
-          width: 138px;
-          height: 172px;
-        }
-        &.scissors {
-          background-image: url('assets/images/scissors.svg');
-          width: 125px;
-          height: 165px;
-        }
-        &.questionMark {
-          background-image: url('assets/images/questionmark.svg');
-          width: 140px;
-          height: 185px;
+      .balloon {
+        background-image: url('assets/images/balloon1.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 412px;
+        height: 368px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        &.invert {
           transform: scaleX(-1);
         }
-      }
-    }
-
-    .profile {
-      display: flex;
-      justify-content: center;
-
-      .playerInfo{
-        text-align: left;
-        padding: 20px 25px;
-        line-height: 50px;
-        //background-color: aqua;
-
-        .playerName {
-          font-size: 64px;
-        }
-        .playerPoints {
-          font-size: 40px;
-        }
-
-        &.playerInfo2{
-          text-align: right;
-          
-        }
-      }
-
-      .avatarP1 {
-        background-image: url('assets/images/Avatar.png');
-        width: 154px;
-        height: 154px;
-      }
-      .avatarP2 {
-        background-image: url('assets/images/viv.png');
-        width: 154px;
-        height: 154px;
-      }
-    }
-  }
-
-  footer {
-    font-weight: normal;
     
-    p {
-      font-size: 20px;
+        .hand {
+          margin-top: -70px;
+    
+          &.rock {
+            background-image: url('assets/images/rock.svg');
+            width: 108px;
+            height: 116px;
+          }
+          &.paper {
+            background-image: url('assets/images/paper.svg');
+            width: 138px;
+            height: 172px;
+          }
+          &.scissors {
+            background-image: url('assets/images/scissors.svg');
+            width: 125px;
+            height: 165px;
+          }
+          &.questionMark {
+            background-image: url('assets/images/questionmark.svg');
+            width: 140px;
+            height: 185px;
+            transform: scaleX(-1);
+          }
+        }
+      }
+  
+    .profile {
+        display: flex;
+        justify-content: center;
+  
+        .playerInfo{
+          text-align: left;
+          padding: 20px 25px;
+          line-height: 50px;
+          //background-color: aqua;
+  
+          .playerName {
+            font-size: 64px;
+          }
+          .playerPoints {
+            font-size: 40px;
+          }
+  
+          &.playerInfo2{
+            text-align: right;
+            
+          }
+
+          .avatarP1 {
+            background-image: url('assets/images/Avatar.png');
+            width: 154px;
+            height: 154px;
+          }
+          .avatarP2 {
+            background-image: url('assets/images/viv.png');
+            width: 154px;
+            height: 154px;
+          }
+        }
     }
+
+    
   }
+  
+    .endContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 200px;
 
+      .imgWinner {
+        position: relative;
+        margin: 80px 0;
 
+        .crown {
+          position: absolute;
+          top: -70px;
+        }
+
+        .winnerAvatar {
+          background-image: url('assets/images/viv.png');
+          background-size: cover;
+          width: 300px;
+          height: 300px;
+        }
+      }
+
+      .restartBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 220px;
+        height: 60px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        background-color: $secondaryBlue;
+        color: #FFFFFF;
+
+        font-family: 'Just Me Again Down Here', cursive;
+        letter-spacing: 5px;
+        font-size: 30px;
+      }
+      
+    }
+
+    footer {
+      font-weight: normal;
+      
+      p {
+        font-size: 20px;
+      }
+    }
+  
+  }
   
 }
 
